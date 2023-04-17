@@ -22,6 +22,7 @@ namespace WebApplicationHW
             app.Map("/GetCarName", ProgramHelpers.HandleCarName);
             app.Map("/GetCarEngine", ProgramHelpers.HandleCarEngine);
             app.Map("/GetCarAge", ProgramHelpers.HandleCarAge);
+            app.Map("/GetCars", ProgramHelpers.HandleCars);
 
 
             app.Use(async (context, next) => 
@@ -39,12 +40,21 @@ namespace WebApplicationHW
                 }
                 );
 
+            //app.Use(async (context, next) =>
+            //{
+            //    var msg = app.Services.GetService<IManagementCars>();
+            //    await context.Response.WriteAsync(msg.GetCars().ToString());
+            //    await next.Invoke();
+            //}
+            //);
+
             app.Use(async (context, next) =>
                 {
 
                     await context.Response.WriteAsync("<br><a href=\"GetCarName\" />CAR NAME</a>");
                     await context.Response.WriteAsync("<br><a href=\"GetCarEngine\" />CAR ENGINE</a>");
                     await context.Response.WriteAsync("<br><a href=\"GetCarAge\" />CAR AGE</a>");
+                    await context.Response.WriteAsync("<br><a href=\"GetCars\" />ALL CARS</a>");
                     await next.Invoke();
                 }
                 );
