@@ -1,0 +1,28 @@
+﻿@page
+@model WebApplicationHW4.Pages.HobbyModel
+@{
+    ViewData["Title"] = "My Hobby";
+}
+<section id="hobby">
+    <h1 class="display-4">My Hobby</h1>
+</section>
+
+<table class="table">
+    <thead>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+    </thead>
+    <tbody>
+        @foreach (var hobby in Model.Hobbies)
+        {
+        <tr>
+            <td>@hobby.Id</td>
+            <td>@hobby.Name</td>
+            <td>@hobby.Description</td>
+            <td>@hobby.Price</td>
+        </tr>
+        }
+    </tbody>
+</table>
