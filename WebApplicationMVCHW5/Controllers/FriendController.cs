@@ -30,20 +30,27 @@ namespace WebApplicationMVCHW5.Controllers
         {
             return View("Create");
         }
-        [HttpGet]
-        public ViewResult Edit(int id, string name, string place)
+        //[HttpGet]
+        public ViewResult Edit(int id, string friendName, string place)
         {
-            // return View("Edit");
-            //Console.Write(id);
-
-            Redirect("Friend/Edit");
+            bool isUpdated;
+            isUpdated = false;
+            foreach (var f in friends.Where(r => r.FriendID == id))
+            {
+                if (f.FriendName != friendName || f.Place != place) { isUpdated = true; }
+                f.FriendName = friendName;
+                f.Place = place;
+            }
 
             ViewBag.FriendID = id;
-            ViewBag.Name = name;
+            ViewBag.FriendName = friendName;
             ViewBag.Place = place;
 
-            return View(); //"Edit"
+            if (isUpdated) { return View("Index", friends); }
+            else
+                return View();
         }
+
         [HttpPost]
         public IActionResult Create(Friend friend)
         {
@@ -55,16 +62,27 @@ namespace WebApplicationMVCHW5.Controllers
                //return View(friend);
             }
             return View("Index", friends);
-            //return View("Create");
         }
-        [HttpPut("Edit/{id}")]
-        public IActionResult Edit(IFormCollection formCollection)
+
+        public IActionResult Delete(int id)
+        {
+            var df = friends.Single(r => r.FriendID == id);
+            friends.Remove(df);
+            return View("Index", friends);
+        }
+
+        //[HttpPut("Edit/{id}")]
+        public IActionResult EditForm(IFormCollection formCollection)
         {
             if (ModelState.IsValid)
             {
-                Console.Write(formCollection["FriendID"]);
-                Console.Write(formCollection["FriendName"]);
-                Console.Write(formCollection["Place"]);
+
+                int id = int.Parse(formCollection["FriendID"]);
+                foreach (var f in friends.Where(r => r.FriendID == id))
+                {
+                    f.FriendName = formCollection["FriendName"];
+                    f.Place = formCollection["Place"];
+                }
             }
             return View("Index", friends);
         }

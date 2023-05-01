@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<WebApplicationMVCHW5.Models.Friend>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Friends";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Friends</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -38,11 +38,11 @@
                 @Html.DisplayFor(modelItem => item.Place)
             </td>
             <td>
-                   <a asp-action="Edit">Edit!</a>
+                
                 @*@Url.RouteUrl(new { controller = "Friend", action = "Edit url", id = item.FriendID })*@
-                @Html.ActionLink("Edit", "Edit", "Friend", new {  id=item.FriendID  }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    @Html.ActionLink("Edit", "Edit",  new {  id=item.FriendID, friendName=item.FriendName, place=item.Place  }) |
+                @* @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+                    @Html.ActionLink("Delete", "Delete", new {  id=item.FriendID  })
             </td>
         </tr>
 }

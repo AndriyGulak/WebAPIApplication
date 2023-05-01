@@ -1,0 +1,49 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-image: url(/AppData/triangles-colorful-background_1539370936.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#div-button-small{
+    align-self: center;
+}
+
+.button-small {
+    background-color: #FFFFFF;
+    color: black;
+    font-size: 20px;
+    border-radius: 24px;
+    padding: 14px 40px;
+/*    margin: auto;
+    display: inline;*/
+}
+.button-small_test {
+    background-color: #FFFFFF;
+    color: black;
+    font-size: 20px;
+    border-radius: 24px;
+    padding: 14px 40px;
+    left: 50%;
+    position: absolute;
+}
+
+

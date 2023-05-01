@@ -15,22 +15,51 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="FriendID" class="control-label"></label>
-                <input asp-for="FriendID" class="form-control" readonly value=> @ViewBag.FriendID />
+                <input asp-for="FriendID" class="form-control" readonly value=@ViewBag.FriendID />
                 <span asp-validation-for="FriendID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="FriendName" class="control-label"></label>
-                <input asp-for="FriendName" class="form-control" value=@ViewData["Name"] />
+                <input asp-for="FriendName" class="form-control" value=@ViewBag.FriendName />
                 <span asp-validation-for="FriendName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Place" class="control-label"></label>
-                <input asp-for="Place" class="form-control" value=@ViewData["Place"] />
+                <input asp-for="Place" class="form-control" value=@ViewBag.Place />
                 <span asp-validation-for="Place" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Edit" class="btn btn-primary" />
             </div>
+
+        </form>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditForm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FriendID" class="control-label"></label>
+                <input asp-for="FriendID" class="form-control" readonly value=@ViewBag.FriendID />
+                <span asp-validation-for="FriendID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FriendName" class="control-label"></label>
+                <input asp-for="FriendName" class="form-control" value=@ViewBag.FriendName />
+                <span asp-validation-for="FriendName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Place" class="control-label"></label>
+                <input asp-for="Place" class="form-control" value=@ViewBag.Place />
+                <span asp-validation-for="Place" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="EditForm" class="btn btn-primary" />
+            </div>
+
         </form>
     </div>
 </div>
