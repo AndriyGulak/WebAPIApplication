@@ -19,31 +19,70 @@ html {
 
 body {
     margin-bottom: 60px;
-    background-image: url(/AppData/triangles-colorful-background_1539370936.jpg);
+    background-image: url(/AppData/triangles-colorful-background.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
-}
-#div-button-small{
-    align-self: center;
+    background-size: cover;
 }
 
+/*div {
+    display: block;
+}*/
+h1 {
+    color: whitesmoke;
+}
+h5 {
+    color: #111111;
+}
+p {
+    font-size: 20px;
+    color: whitesmoke;
+}
+.button-container {
+    text-align: center;
+}
+
+.my-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 60px;
+    padding: 20px;
+    margin: auto auto auto auto;
+}
+
+.my-contaiter-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 60px 0;
+    font-size: 30px;
+    border-radius: 35px;
+    
+}
+
+.c-item-1 {
+    box-shadow: 7px 3px 4px navy;
+}
+.c-item-2 {
+    box-shadow: 7px 3px 4px yellowgreen;
+}
+.c-item-3 {
+    box-shadow: 7px 3px 4px gold;
+}
+.c-item-4 {
+    box-shadow: 7px 3px 4px indianred;
+}
+/*#div-button-small{
+    align-self: center;
+}*/
 .button-small {
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF;*/
+    background: rgba(0,0,0,0);
     color: black;
+    border-color: white;
     font-size: 20px;
-    border-radius: 24px;
-    padding: 14px 40px;
-/*    margin: auto;
-    display: inline;*/
+    border-radius: 35px;
+    padding: 15px 40px;
+    margin: 0 auto 0 25px;
 }
-.button-small_test {
-    background-color: #FFFFFF;
-    color: black;
-    font-size: 20px;
-    border-radius: 24px;
-    padding: 14px 40px;
-    left: 50%;
-    position: absolute;
-}
+
 
 

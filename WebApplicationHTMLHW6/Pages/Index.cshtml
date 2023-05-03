@@ -4,7 +4,10 @@
     ViewData["Title"] = "Home page";
 }
 <div class="text-center">
+    <br>
+    <br>
     <h1 class="display-4">About me</h1>
+
     <p>
         I have been in the software development since 2006, working for national and worldwide companies in domains such as media, retail, automotive and insurance. I come from Kyiv and live here with my family of three and a cat. I graduated from the Kyiv Polytechnic Institute and got a degree in Computer science.
         Among the area of my professional interests are databases,  DWH, and C# programming language.
@@ -12,22 +15,47 @@
         At leisure time I prefer having BBQs with my family and friends, go skiing, cycling and learning new things in the technology world.</a>.
     </p>
 </div>
-
+<br>
 @*<form action="https://google.com">
     <input type="submit" value="Go to Google" />
 </form>*@
-<div id="div-button-small">
-    <button class="button-small" onclick="location.href='#'" type="button">
-        About Us
-    </button>
-    <button class="button-small" onclick="location.href='#'" type="button">
-        Our Works
-    </button>
+<div class="button-container">
+    <div id="div-button-small">
+        <button class="button-small" onclick="location.href='https://www.infopulse.com/'" type="button">
+            About Us
+        </button>
+        <button class="button-small" onclick="location.href='https://www.infopulse.com/company'" type="button">
+            Our Works
+        </button>
+    </div>
 </div>
+<br>
 
-<button class="button-small_test" onclick="location.href='#'" type="button" >
+<div class="my-container">
+    <a href="https://www.infopulse.com/">
+        <div class="my-contaiter-item c-item-1">
+            <img src="~/appdata/atom.png" alt="img" style="width:100px;height:100px;margin: 0px 0px 20px 0;" />
+            <h5>SIMPLE</h5>
+        </div>
+    </a>
+    <div class="my-contaiter-item c-item-2">
+        <img src="~/appdata/vaccine.png" alt="img" style="width:100px;height:100px;margin: 0px 0px 20px 0;" />
+        <h5>NO CODING</h5>
+    </div>
+    <div class="my-contaiter-item c-item-3">
+        <img src="~/appdata/molecules.png" alt="img" style="width:100px;height:100px;margin: 0px 0px 20px 0;" />
+        <h5>500+ SITES</h5>
+    </div>
+    <div class="my-contaiter-item c-item-4">
+        <img src="~/appdata/first-aid-kit.png" alt="img" style="width:100px;height:100px;margin: 0px 0px 20px 0;" />
+        <h5>GIFTS</h5>
+    </div>
+</div>
+<br>
+<br>
+@*<button class="button-small_test" onclick="location.href='#'" type="button" >
     Our Works
-</button>
+</button>*@
 
 @*
 <button type="button" class="btn btn-primary">Primary</button>
