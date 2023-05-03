@@ -50,15 +50,17 @@ p {
 }
 
 .my-contaiter-item {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.4);
+    /*background: rgba(0,0,0,0);*/
     text-align: center;
     padding: 60px 0;
     font-size: 30px;
     border-radius: 35px;
-    
 }
 
 .c-item-1 {
+/*    border-style: solid;
+    border-color: blue yellow darkblue hsla(60, 90%, 50%, .8);*/
     box-shadow: 7px 3px 4px navy;
 }
 .c-item-2 {
